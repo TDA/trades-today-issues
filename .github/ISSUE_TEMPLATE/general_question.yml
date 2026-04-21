@@ -1,0 +1,43 @@
+name: "General Question"
+description: Ask a general question about Trades Today.
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question about Trades Today? Ask away! We'll do our best to help.
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      description: What is your question about?
+      options:
+        - Getting Started
+        - Account / Settings
+        - Trading Features
+        - Portfolio Management
+        - Charts / Analysis Tools
+        - Alerts / Notifications
+        - Integrations
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: Please describe your question in detail.
+      placeholder: "What would you like to know?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any additional context that might help us answer your question.
+    validations:
+      required: false
