@@ -1,0 +1,69 @@
+name: "Data Accuracy Issue"
+description: Report incorrect or missing market data, prices, or analytics in Trades Today.
+title: "[Data]: "
+labels: ["data-accuracy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Accurate data is critical for trading. Please report any data discrepancies you've noticed.
+
+  - type: dropdown
+    id: data-type
+    attributes:
+      label: Data Type
+      description: What type of data is affected?
+      options:
+        - Stock / Ticker Prices
+        - Options Data
+        - Portfolio Values
+        - P&L Calculations
+        - Charts / Historical Data
+        - Market Indicators
+        - News / Sentiment Data
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: ticker
+    attributes:
+      label: Ticker / Symbol
+      description: If applicable, which ticker or symbol is affected?
+      placeholder: "e.g., AAPL, SPY, TSLA"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: Describe the data accuracy issue in detail.
+      placeholder: "What data is wrong? What did you expect vs. what was shown?"
+    validations:
+      required: true
+
+  - type: input
+    id: timestamp
+    attributes:
+      label: Date / Time Observed
+      description: When did you notice this issue?
+      placeholder: "e.g., 2026-04-20 at 2:30 PM ET"
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots showing the data discrepancy.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context about the data issue.
+    validations:
+      required: false
